@@ -3,16 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>piazza</title>
+    <title>Sign up for piazza</title>
     <style>
         body {
             font-family: sans-serif;
-            background-color: #f0f2f5;
+            background-color: #e2edf6;
+            margin: 0; 
+            padding-top: 60px;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            margin: 0;
+            min-height: calc(100vh - 60px);
+        }
+
+        .top-banner {
+            background-color: #3e7aab;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            position: fixed; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .top-banner-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .top-banner h1 {
+            margin: 0 20px 0 0;
+            font-size: 24px;
+            font-weight: bold;
+            padding-right: 575px;
+        }
+
+        .top-banner .links button {
+            background-color: #fff;
+            color: gray;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9em;
+            margin-left: 10px;
+        }
+
+        .top-banner .links button:hover {
+            background-color: #003d80;
         }
 
         .container {
@@ -22,36 +65,6 @@
             padding: 30px;
             width: 400px;
             text-align: center;
-        }
-
-        .header {
-            background-color: #3e7aab;
-            color: white;
-            padding: 15px 0;
-            margin-bottom: 20px;
-            border-radius: 8px 8px 0 0;
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .school-info {
-            margin-bottom: 20px;
-            text-align: left;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            background-color: #f9f9f9;
-        }
-
-        .school-info h2 {
-            font-size: 1.5em;
-            margin-top: 0;
-            margin-bottom: 5px;
-        }
-
-        .school-info p {
-            color: #777;
-            margin-bottom: 5px;
         }
 
         .form-container {
@@ -117,55 +130,39 @@
             font-size: 0.9em;
             margin-top: 20px;
         }
-
-        .top-bar {
-            background-color: #e9ecef;
-            padding: 10px;
-            text-align: right;
-            border-radius: 4px 4px 0 0;
-            margin-bottom: 10px;
-        }
-
-        .top-bar a {
-            color: #007bff;
-            text-decoration: none;
-            margin-left: 15px;
-        }
-
-        .top-bar a:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 <body>
-  <div class="container">
-      <div class="top-bar">
-        <a href="#">Looking for piazza careers?</a>
-            <a href="#">Log In</a>
-      </div>
-      <div class="header">
-            piazza
-      </div>
+    <div class="top-banner">
+        <div class="top-banner-content">
+            <h1>piazza</h1>
+            <div class="links">
+                <button>Looking for piazza careers?</button>
+                <button>Log In</button>
+            </div>
+        </div>
+    </div>
 
-      <div class="form-container">
-        <h2>Please enter your account information</h2>
-          <p>Please enter the email address and password for your account.</p>
-          <form action="#" method="post">
-            <div class="form-group">
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required>
-              </div>
-              <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-              </div>
-              <button type="submit">Submit</button>
+    <div class="container">
+        <div class="form-container">
+            <h2>Please enter your account information</h2>
+            <p>Please enter the email address and password for your account.</p>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Submit</button>
             </form>
-      </div>
+        </div>
 
-      <div class="bottom-links">
-          <p>Unable to sign up? Email us at team@piazza.com and we'll help you get started!</p>
-      </div>
-  </div>
+        <div class="bottom-links">
+            <p>Unable to sign up? Email us at team@piazza.com and we'll help you get started!</p>
+        </div>
+    </div>
 </body>
 </html>
