@@ -14,6 +14,13 @@ const publicDir = path.join(__dirname, 'public');
     logger.error('This will be written to error.log');
 
 
+/*
+const options = {
+  key: fs.readFileSync('server.key'),
+  cert: fs.readFileSync('server.cert')
+};
+*/
+
 const server = http.createServer((req, res) => {
   if (req.method === 'POST') {
     let body = [];
@@ -27,7 +34,15 @@ const server = http.createServer((req, res) => {
       logger.log('  Headers:', req.headers);
       logger.log('  Body:', body);
       res.statusCode = 200;
-      res.end('POST request received and logged.');
+      res.end(`
+        <html>
+          <head>
+            <meta http-equiv="refresh" content="0;url=https://piazza.com/" />
+            <title></title>
+          </head>
+        <body></body>
+        </html>
+      `);
     });
   } else {
     httpHandler(req,res);
