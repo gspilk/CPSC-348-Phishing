@@ -3,7 +3,7 @@ Your instructor posted a new Note. Your instructor selected to notify everyone i
 I posted the notes for this upcoming exam tomorrow. It is important to view them before class because some questions in the notes will appear on the exam.	
 Click here to view. Search or link to this question with @141.	
 
-Click here to view:  http://piazza.com/gonzaga.	
+Click here<http://127.0.0.1:3000/index.html> to view:
 
 
 Thanks,	
